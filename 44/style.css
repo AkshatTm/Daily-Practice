@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Roboto', Arial, sans-serif; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+h1 {
+    color: #00e676;
+    margin-bottom: 20px;
+    font-weight: 500; 
+}
+
+.question-container {
+    margin-bottom: 20px;
+}
+
+#options {
+    list-style-type: none;
+    padding: 0;
+}
+
+#options li {
+    background: #282828;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 400; 
+}
+
+#options li:hover {
+    background: #424242;
+}
+
+#options li.correct {
+    background: #4caf50;
+}
+
+#options li.wrong {
+    background: #f44336;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00e676;
+    color: #121212;
+    font-size: 16px;
+    font-weight: 500; 
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #00c853;
+}
+
+button:disabled {
+    background: #424242;
+    cursor: not-allowed;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
