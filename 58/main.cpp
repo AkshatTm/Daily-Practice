@@ -1,20 +1,21 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-int sumEvenOdd(int start, int end, bool isEven) {
-    if (start > end) return 0;
-    if (isEven && start % 2 == 0) return start + sumEvenOdd(start + 1, end, isEven);
-    if (!isEven && start % 2 != 0) return start + sumEvenOdd(start + 1, end, isEven);
-    return sumEvenOdd(start + 1, end, isEven);
+string deleteWord(string str, string word) {
+    size_t pos;
+    while ((pos = str.find(word)) != string::npos) {
+        str.erase(pos, word.length());
+    }
+    return str;
 }
 
 int main() {
-    int start, end;
-    bool isEven;
-    cout << "Enter start and end: ";
-    cin >> start >> end;
-    cout << "Enter 1 for even, 0 for odd: ";
-    cin >> isEven;
-    cout << "Sum: " << sumEvenOdd(start, end, isEven);
+    string str, word;
+    cout << "Enter a string: ";
+    getline(cin, str);
+    cout << "Enter the word to delete: ";
+    cin >> word;
+    cout << "Result: " << deleteWord(str, word);
     return 0;
 }
