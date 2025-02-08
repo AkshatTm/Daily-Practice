@@ -1,0 +1,4 @@
+Hello, this is a sample file.
+Writing to files in C++ is easy!
+Appended content to the file.
+Appended content to the file.
