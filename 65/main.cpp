@@ -1,38 +1,18 @@
 #include <iostream>
 #include <fstream>
-#include <string>
 using namespace std;
 
-const int MAX_WORDS = 100;
-
 int main() {
-    ifstream inputFile("example.txt");
-    string words[MAX_WORDS];
-    int counts[MAX_WORDS] = {0};
-    int wordCount = 0;
-    string word;
+    ifstream sourceFile(__FILE__);
 
-    if (inputFile.is_open()) {
-        while (inputFile >> word) {
-            bool found = false;
-            for (int i = 0; i < wordCount; i++) {
-                if (words[i] == word) {
-                    counts[i]++;
-                    found = true;
-                    break;
-                }
-            }
-            if (!found && wordCount < MAX_WORDS) {
-                words[wordCount] = word;
-                counts[wordCount] = 1;
-                wordCount++;
-            }
+    if (sourceFile.is_open()) {
+        string line;
+        while (getline(sourceFile, line)) {
+            cout << line << endl;
         }
-        inputFile.close();
-    }
-
-    for (int i = 0; i < wordCount; i++) {
-        cout << words[i] << ": " << counts[i] << endl;
+        sourceFile.close();
+    } else {
+        cout << "Error opening the source file." << endl;
     }
 
     return 0;

@@ -1,3 +1,0 @@
-This is a sample file.
-This file contains some words.
-Words in this file will be counted.
