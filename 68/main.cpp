@@ -3,14 +3,16 @@
 using namespace std;
 
 int main() {
-    struct stat fileStat;
-    if (stat("example.txt", &fileStat) == 0) {
-        cout << "File Size: " << fileStat.st_size << " bytes" << endl;
-        cout << "Permissions: " << fileStat.st_mode << endl;
-        cout << "Last Modified: " << fileStat.st_mtime << endl;
+    char name[100];
+    cout << "Enter file or directory name: ";
+    cin >> name;
+
+    struct stat info;
+    if (stat(name, &info) == 0) {
+        cout << "Exists!" << endl;
     } else {
-        cout << "Unable to get file properties." << endl;
+        cout << "Does not exist!" << endl;
     }
+
     return 0;
 }
-
