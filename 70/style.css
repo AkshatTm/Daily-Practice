@@ -74,20 +74,21 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(rgba(6, 214, 160, 0.2), rgba(6, 214, 160, 0.2)), url('back.jpg');
+    background-image: linear-gradient(rgba(6, 214, 160, 0.1), rgba(6, 214, 160, 0.1)), url('back.jpg');
     background-size: cover;
     background-position: center;
     color: #F8FFE5;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 7rem;
     margin-bottom: 1rem;
     font-weight: 600;
+    font-family: "krylon";
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     font-weight: 300;
 }
