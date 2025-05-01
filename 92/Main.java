@@ -1,37 +1,28 @@
 import java.util.Scanner;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Int to double
-        System.out.print("Enter an integer: ");
-        int intVal = sc.nextInt();
-        double doubleVal = (double) intVal;
-        System.out.println("Converted to double: " + doubleVal);
+        System.out.print("Enter a number to find square root: ");
+        double num1 = sc.nextDouble();
+        System.out.println("Square root: " + Math.sqrt(num1));
 
-        // Double to int
-        System.out.print("Enter a double: ");
-        double doubleInput = sc.nextDouble();
-        int intFromDouble = (int) doubleInput;
-        System.out.println("Converted to int: " + intFromDouble);
+        System.out.print("Enter a number to find absolute value: ");
+        int num2 = sc.nextInt();
+        System.out.println("Absolute value: " + Math.abs(num2));
 
-        // Char to int
-        System.out.print("Enter a character: ");
-        char ch = sc.next().charAt(0);
-        int charToInt = (int) ch;
-        System.out.println("Character as int: " + charToInt);
+        int random = (int)(Math.random() * 100) + 1;
+        System.out.println("Random number between 1 and 100: " + random);
 
-        // Float to int
-        System.out.print("Enter a float: ");
-        float floatVal = sc.nextFloat();
-        int intFromFloat = (int) floatVal;
-        System.out.println("Converted float to int: " + intFromFloat);
+        System.out.print("Enter base: ");
+        double base = sc.nextDouble();
+        System.out.print("Enter exponent: ");
+        double exponent = sc.nextDouble();
+        System.out.println("Power: " + Math.pow(base, exponent));
 
-        // Int to String
-        System.out.print("Enter an integer to convert to String: ");
-        int num = sc.nextInt();
-        String str = Integer.toString(num);
-        System.out.println("Integer as String: " + str);
+        System.out.print("Enter a decimal number to round: ");
+        float decimalNum = sc.nextFloat();
+        System.out.println("Rounded value: " + Math.round(decimalNum));
     }
 }
